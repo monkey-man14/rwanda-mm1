@@ -6,42 +6,43 @@
     <title>Rwanda MM1 - Games Hub</title>
     <!-- Default Favicon (Google Drive) -->
     <link id="favicon" rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a3/Google_Drive_logo_2014.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css"> <!-- Your custom CSS if you have one -->
 </head>
 <body>
     <h1>Welcome to Rwanda MM1!</h1>
     <h2>Check Out These Game Links:</h2>
     <ul>
-        <li><a href="https://examplegame1.com" target="_blank">Game 1</a></li>
-        <li><a href="https://examplegame2.com" target="_blank">Game 2</a></li>
-        <li><a href="https://examplegame3.com" target="_blank">Game 3</a></li>
+        <li><a href="http://mass.prep.tanenbaumchat.org" target="_blank">Mass Prep</a></li>
+        <li><a href="http://link-fiveibewlocalzero.com" target="_blank">Link Five IBEW</a></li>
+        <li><a href="http://rutgerslineup.emtbiceland.is" target="_blank">Rutgers Lineup</a></li>
+        <li><a href="http://web0213.medscience.cl" target="_blank">Web MedScience</a></li>
     </ul>
 
-    <button onclick="cloakWebsiteAndOpenLinks()">Click to Cloak Website and Open Links</button>
+    <button onclick="cloakAndRedirect()">Click to Cloak Website and Open Links</button>
 
     <script>
-        function cloakWebsiteAndOpenLinks() {
+        function cloakAndRedirect() {
+            // Cloak the website with about:blank
+            window.location.href = "about:blank";  // Cloak the current page
+
             // Change the favicon to Google Classroom (or Google Drive)
-            document.getElementById("favicon").href = "https://upload.wikimedia.org/wikipedia/commons/6/60/Google_Classroom_icon_2020.svg"; // Or change to Google Drive URL
+            document.getElementById("favicon").href = "https://upload.wikimedia.org/wikipedia/commons/6/60/Google_Classroom_icon_2020.svg";
 
-            // Open the four links in the same tab with 'about:blank'
+            // After a short delay, open the desired links
             setTimeout(function() {
-                window.location.href = "about:blank";  // Cloak the website with about:blank
-            }, 100); // Wait a bit before cloaking the website
+                window.location.href = "http://mass.prep.tanenbaumchat.org";
+            }, 500); // Delay for a moment before opening the first link
 
-            // Open the provided links in the same tab
-            window.location.href = "http://mass.prep.tanenbaumchat.org";
             setTimeout(function() {
                 window.location.href = "http://link-fiveibewlocalzero.com";
-            }, 2000); // Delay the opening of the next link to simulate sequential opening
+            }, 2500); // Delay the opening of the second link
 
             setTimeout(function() {
                 window.location.href = "http://rutgerslineup.emtbiceland.is";
-            }, 4000); // Continue for the next link
+            }, 4500); // Continue with the third link
 
             setTimeout(function() {
                 window.location.href = "http://web0213.medscience.cl";
-            }, 6000); // Continue for the last link
+            }, 6500); // Continue with the fourth link
         }
     </script>
 </body>
